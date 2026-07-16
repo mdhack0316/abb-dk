@@ -116,4 +116,56 @@
 
 
 
+Docker container apache 
+
+
+118  apt update && apt install apache2 -y
+  119  cd /var/www/html/
+  120  pwd
+  121  ld
+  122  ls
+  123  rm -f index.html
+  124  pwd
+  125  echo  "Hello World"  > index.html
+  126  pwd
+  127  ls
+  128  cat index.html
+  129  systemctl start apache2
+  130  systemctl status apache2
+  131  curl  ifconfig.me
+  132  curl 54.203.139.37
+  133  iptables -F
+  134  vim index.html
+  135  cat index.html
+  136  cd
+  137  docker run  -it ubuntu
+  138  docker run  -it oraclelinux:8.3
+  139  docker ps -a
+  140  ifconfig
+  141  ip a
+  142  sudo sysctl -w net.ipv4.ip_forward=1
+  143  cat /proc/sys/net/ipv4/ip_forward
+  144  sysc-p
+  145  sysctl -p
+  146  systemctl restart docker
+  147  docker ps
+  148  docker ps -a
+  149  docker start silly_wiles
+  150  docker exec -it silly_wiles
+  151  docker exec -it silly_wiles bash
+  152  curl 172.17.0.2
+  153  docker ps -a
+  154  docker run -it -p 3000:80  oraclelinux:8.3
+  155  docker run -itd   -p 3001:80   --name mayank1  httpd
+  156  docker run -itd   -p 3002:80   --name mayank2  nginx
+  157  docker run -itd   -p 3003:80   --name mayank3  mdhack/myserver
+  158  docker run -itd   -p 3004:80   --name mayank4  mdhack/myapache
+  159  docker run -itd   -p 3005:80   --name mayank5  mdhack/mayanknginximage
+  160  history
+  161  docker ps -a
+  162  docker stats
+
+
+
+
 
