@@ -166,6 +166,66 @@ Docker container apache
   162  docker stats
 
 
+Dockerfile 
+
+ 179  mkdir docker
+  180  cd docker
+  181  pwd
+  182  ls
+  183  vim Dockerfile
+  184  cat Dockerfile
+  185  ls
+  186  echo  Hello From mayank   > mayank.html
+  187  vim Dockerfile
+  188  ls
+  189  docker build -t  mayank:v1  .
+  190  docker images
+  191  docker history mayank:v1
+  192  docker run -itd  -p 3434:80 mayank:v1
+  193  docker ps
+  194  docker ps -a
+  195  vi Dockerfile
+  196  docker rmi -f mayank:v1
+  197  docker build -t  mayank:v2  .
+  198  docker images
+  199  docker run -itd  -p 3435:80 mayank:v1
+  200  docker run -itd  -p 3435:80 mayank:v12
+  201  docker run -itd  -p 3435:80 mayank:v2
+  202  vi Dockerfile
+  203  cat Dockerfile
+  204  ls
+  205  git clone https://github.com/mdhack0316/dockerfile
+  206  cd dockerfile/
+  207  ls
+  208  cd normalwebsite/
+  209  ls
+  210  vim Dockerfile
+  211  mv Dockerfile mayankfile
+  212  ls
+  213  docker build -t  mozilla:v1   .
+  214  docker build -t  mozilla:v1  -f mayankfile   .
+  215  docker images
+  216  docker run -itd -p 3535:80  mozilla:v1
+  217  ls
+  218  docker ps -a
+  219  ls
+  220  vim index.html
+  221  docker cp index.html practical_chatterjee:/var/www/html/
+  222  cd ..
+  223  ls
+  224  cd pythoncodedocker/
+  225  ls
+  226  cat hello.py
+  227  cat Dockerfile
+  228  docker build -t python  .
+  229  docker images
+  230  docker run -it python
+  231  docker ps
+  232  docker run -itd  python
+  233  docker ps
+  234  docker logs  thirsty_goldstine
+  235  docker logs  -f   thirsty_goldstine
+
 
 
 
