@@ -1,0 +1,119 @@
+  1  pwd
+    2  ls
+    3  touch mayank.txt
+    4  ls
+    5  cat mayank.txt
+    6  ls -l
+    7  cat mayank.txt
+    8  ls -la
+    9  ls -l
+   10  date
+   11  touch mayank.txt
+   12  date
+   13  ls -l
+   14  date
+   15  touch mayank.txt
+   16  ls -l
+   17  mkdir abbb
+   18  ls
+   19  pwd
+   20  ls
+   21  cd  abbb/
+   22  pwd
+   23  ls
+   24  touch abb
+   25  ls
+   26  mkdir a
+   27  cd a
+   28  mkdir b
+   29  cd b
+   30  pwd
+   31  cd ..
+   32  pwd
+   33  cd
+   34  pwd
+   35  ls
+   36  touch qwerty
+   37  ls
+   38  ls --color none
+   39  ls --color=none
+   40  ls -l
+   41  ls
+   42  rm qwerty
+   43  ls
+   44  rm mayank.txt
+   45  ls
+   46  rmdir abbb/
+   47  ls abbb/
+   48  rm   -rvf abbb/
+   49  ls
+   50  date
+   51  cal
+   52  pwd
+   53  echo  hi
+   54  echo  hi+how ae you
+   55  echo  3+4
+   56  echo  helo how are you
+   57  echo  helo how are you    >     mayank.txt
+   58  ls
+   59  cat mayank.txt
+   60  vim  abb.txt
+   61  history
+
+
+
+
+  68  docker
+   69  apt update && apt install docker.io -y
+   70  docker
+   71  uname -r
+   72  docker info
+   73  uname -r
+   74  docker images
+   75  docker image
+   76  docker images
+   77  docker ps
+   78  docker ps -a
+   79  docker images
+   80  docker search  hello-world
+   81  docker
+   82  docker run hello-world
+   83  docker ps
+   84  docker ps  -a
+   85  docker search oraclelinux
+   86  docker search oraclelinux:8.3
+   87  docker pull loraclelinux:8.3
+   88  docker pull oraclelinux:8.3
+   89  docker images
+   90  docker history oraclelinux:8.3
+   91  echo   $SHELL
+   92  bash
+   93  docker run oraclelinux:8.3
+   94  docker ps -a
+   95  docker run  -it  oraclelinux:8.3
+   96  docker ps -a
+   97  docker start jolly_satoshi
+   98  docker ps -a
+   99  docker start vigorous_shtern
+  100  docker ps -a
+  101  docker ps
+  102  docker exec  -it vigorous_shtern
+  103  docker exec  -it vigorous_shtern   bash
+  104  docker ps
+  105  docker ps -a
+  106  dokcer run --name web1  -it oraclelinux:8.3
+  107  docker run --name web1  -it oraclelinux:8.3
+  108  docker ps
+  109  docker ps -a
+  110  docker run --name web2  -it oraclelinux:8.3
+  111  docker ps
+  112  docker rename web2 web3
+  113  docker ps
+  114  docker stop web3
+  115  docker ps
+  116  docker ps -a
+  117  history
+
+
+
+
