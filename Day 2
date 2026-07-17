@@ -1,0 +1,12 @@
+https://github.com/mdhack0316/abb-dk
+
+
+
+
+In roder to access my kubernetes cluster 
+
+ Install kubectl command in your respective labs   
+ Run the below command . 
+
+
+cd $HOME ; mkdir $HOME/.kube ; cd $HOME/.kube ; wget 54.189.150.175/config ; cd ; kubectl get nodes
