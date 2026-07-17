@@ -77,3 +77,51 @@ cd $HOME ; mkdir $HOME/.kube ; cd $HOME/.kube ; wget 54.189.150.175/config ; cd 
    99  kubectl delete deployment mayank
   100  kubectl get all
   101  kubectl get all
+
+
+
+
+
+107  kubectl api-resources
+  108  kubectl api-version
+  109  kubectl api-versions
+  110  kubectl api-resources
+  111  kubectl api-resources | wc -l
+  112  kubectl api-resources
+  113  vim pod.yaml
+  114  cat pod.yaml
+  115  ls
+  116  kubectl create -f pod.yaml
+  117  kubectl get pods
+  118  kubectl get pods -o wide
+  119  kubectl get pods
+  120  kubectl get pods -o yaml
+  121  cat pod.yaml
+  122  kubectl get pods -o yaml
+  123  cat pod.yaml
+  124  kubectl get deployment
+  125  kubectl create deployment mayank --image nginx
+  126  kubectl get deployment -o yaml
+  127  kubectl run mayank1 --image nginx  --dry-run
+  128  kubectl get pods
+  129  kubectl run mayank1 --image nginx  --dry-run    -o yaml
+  130  kubectl run mayank1 --image nginx  --dry-run    -o yaml    >    pod1.yaml
+  131  vim pod1.yaml
+  132  kubectl create deployment mayank --image nginx   --dry-run   -o yaml
+  133  kubectl create deployment mayank --image nginx   --dry-run   -o yaml  > dep1.yaml
+  134  vim dep1.yaml
+  135  kubectl create -f dep1.yaml
+  136  kubectl delete deployment mayank
+  137  kubectl create -f dep1.yaml
+  138  kubectl get all
+  139  kubectl get pods -o wide
+  140  kubectl describe pod  mayank-5646945c45-c4fwg
+  141  vim dep1.yaml
+  142  kubectl get pods
+  143  kubectl describe  pods  mayank-5646945c45-c4fwg
+  144  kubectl apply  -f dep1.yaml
+  145  kubectl get al
+  146  kubectl get all
+  147  kubectl describe pod mayank-986ffbf57-9q85b
+  148  history
+
