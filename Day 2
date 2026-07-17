@@ -125,3 +125,153 @@ cd $HOME ; mkdir $HOME/.kube ; cd $HOME/.kube ; wget 54.189.150.175/config ; cd 
   147  kubectl describe pod mayank-986ffbf57-9q85b
   148  history
 
+
+
+
+Kubernetes SVC
+
+
+150  kubectl get pods
+  151  kubectl create deployment web1  --image nginx
+  152  kubectl describe deployment web1
+  153  kubectl get pods -o wide
+  154  curl 192.168.166.164
+  155  kubectl delete pod web1-787d8ccbdc-grp56
+  156  curl 192.168.166.164
+  157  kubectl get pods -o wide
+  158  kubectl expose deployment web1 --port 80
+  159  kubectl get service
+  160  curl 10.98.137.163
+  161  kubectl get pods -o wide
+  162  kubectl describe svc web1
+  163  kubectl get deployment --show-labels
+  164  kubectl delete pod web1-787d8ccbdc-j9rhw
+  165  kubectl get pods -o wide
+  166  kubectl describe svc web1
+  167  curl 10.98.137.163
+  168  kubectl create service clusterip  --tcp 80 tetsting
+  169  kubectl get svc
+  170  curl
+  171  curl  10.96.48.79
+  172  kubectl describe svc tetsting
+  173  curl  10.96.48.79
+  174  kubectl edit svc tetsting
+  175  curl  10.96.48.79
+  176  kubectl describe svc tetsting
+  177  kubectl delete all --all --force
+  178  kubectl create deployment mayank --image nginx
+  179  kubectl expose deployment mayank --port 80  --type NodePort
+  180  kubectl get svc
+  181  kubectl describe svc mayank
+  182  kubectl expose deployment mayank --port 80  --type NodePort  --node-port 31000  --name abbtesting
+  183  kubectl expose deployment mayank --port 80  --type NodePort    --name abbtesting  --help
+  184  kubectl expose deployment mayank --port 80  --type NodePort    --name abbtesting
+  185  kubectl get svc
+  186  kubectl create service nodeport  --tcp 80 --help
+  187  kubectl create service nodeport  --tcp 80 --node-port 31000  qwerty
+  188  kubectl get svc
+  189  kubectl describe svc  qwerty
+  190  kubectl get deployment --show-labels
+  191  kubectl edit svc qwerty
+  192  kubectl describe svc  qwerty
+  193  kubectl create service nodeport  --tcp 80 --node-port 31000  qwerty    --dry-run -o yaml
+  194  kubectl create service nodeport  --tcp 80 --node-port 31000  qwerty    --dry-run -o yaml > svc.yaml
+  195  vim s
+  196  vim svc.yaml
+  197  kubectl delete svc --all
+  198  kubectl create -f svc.yaml
+  199  kubectl get svc
+  200  kubectl describe svc qwerty
+  201  vi svc.yaml
+  202  kubectl apply -f svc.yaml
+  203  kubectl describe svc qwerty
+  204  history
+
+
+
+
+root@master:~# cat pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mayank
+spec:
+  containers:
+  - name: mayankcontainer
+    image: nginx
+
+
+
+
+
+root@master:~# cat pod1.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: mayank1
+  name: mayank1
+spec:
+  containers:
+  - image: nginx
+    name: mayank1
+
+
+
+
+
+
+root@master:~# cat dep1.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: mayank
+  name: mayank
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mayank
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: mayank
+    spec:
+      containers:
+      - image: httpd
+        name: nginx
+        resources: {}
+status: {}
+
+
+
+
+
+
+root@master:~# cat svc.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: qwerty
+  name: qwerty
+spec:
+  ports:
+  - name: "80"
+    nodePort: 31000
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: mayank
+  type: NodePort
+status:
+  loadBalancer: {}
+
+
