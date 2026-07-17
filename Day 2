@@ -10,3 +10,70 @@ In roder to access my kubernetes cluster
 
 
 cd $HOME ; mkdir $HOME/.kube ; cd $HOME/.kube ; wget 54.189.150.175/config ; cd ; kubectl get nodes
+
+
+
+
+ 45  kubectl get ns
+   46  kubectl get pods
+   47  kubectl get pods --namespace  kube-node-lease
+   48  kubectl get pods --namespace  kube-public
+   49  kubectl get pods --namespace  kube-system
+   50  kubectl get pods
+   51  kubectl create namespace mayank
+   52  kubectl get pods
+   53  kubectl get ns
+   54  kubectl get pods
+   55  kubectl get pods  -n mayank
+   56  kubectl config get-context
+   57  kubectl config get-contexts
+   58  kubectl config set-context  kubernetes-admin@kubernetes  --namespace  mayank
+   59  kubectl config get-contexts
+   60  kubectl get pods
+   61  kubectl get pods -n default
+   62  kubectl get pods
+   63  history
+   64  kubectl config get-contexts
+   65  kubectl get pods
+   66  vi .kube/config
+   67  kubectl get pods
+
+
+
+
+
+  67  kubectl get pods
+   68  history
+   69  ls
+   70  kubectl get pods
+   71  kubectl
+   72  kubectl run  mayank  --image httpd
+   73  kubectl get pods
+   74  kubectl get pods  -o wide
+   75  curl 192.168.166.129
+   76  kubectl get pods  -o wide
+   77  kubectl describe pod mayank
+   78  kubectl get pods
+   79  kubectl delete pod mayank
+   80  kubectl get pods
+   81  kubectl create
+   82  kubectl create deployment  mayank --image nginx
+   83  kubectl get deployment
+   84  kubectl get r
+   85  kubectl get rs
+   86  kubectl get pods
+   87  kubectl get all
+   88  kubectl describe pod mayank-5646945c45-r7rmp
+   89  kubectl get rs
+   90  kubectl describe  rs  mayank-5646945c45
+   91  kubectl describe  deployment mayank
+   92  kubectl get all
+   93  kubectl delete pod mayank-5646945c45-r7rmp
+   94  kubectl get all
+   95  kubectl delete rs mayank-5646945c45
+   96  kubectl get all
+   97  kubectl get pods -o wide
+   98  curl 192.168.166.131
+   99  kubectl delete deployment mayank
+  100  kubectl get all
+  101  kubectl get all
